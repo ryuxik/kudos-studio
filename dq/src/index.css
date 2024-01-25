@@ -1,8 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --main-color: #F5F5F5;
+  --main-font-color:#000000;
+  --blue-a: #ACDAED;
+  --blue-b: #ACDAEF;
+  --green-a: #D2E654;
+  --green-b: #EAE568;
+  --pink-a: #E9B1C7;
+  --pink-b: #F3A19A;
+  --red-a: #EE1414;
+  --red-b: #FE11CE;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Tilt Neon', sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

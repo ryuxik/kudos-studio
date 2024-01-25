@@ -1,0 +1,59 @@
+.nav {
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    height: 5vh;
+    border: 1px solid var(--main-font-color);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 63.59%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(270deg, #A8D7FF -1.41%, #CBF155 20.9%, #FF9B45 42.48%, #EAE862 61.91%, #E8A4DD 73.91%, #FF5BE5 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.nav-tab {
+    font-size: calc(10px + 1vmin);
+    font-weight: 500;
+    opacity: 50%;
+    text-decoration: none !important;
+    color: var(--main-font-color);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-tab {
+    opacity: 100%;
+}
+
+.nav-tab:hover {
+    cursor: pointer;
+}
+
+#home-tab {
+    order: 1;
+}
+
+#about-tab {
+    order: 2;
+}
+
+#name {
+    order: 0;
+    opacity: 100%;
+    flex-grow: 7;
+}
+
+#name:hover {
+    cursor: default;
+}
+
+#time {
+    order: 3;
+    opacity: 100%;
+    flex-grow: 7;
+}
+
+#time:hover {
+    cursor: default;
+}
