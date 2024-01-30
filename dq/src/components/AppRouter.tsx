@@ -1,8 +1,21 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './About';
 import Home from './Home';
 import Navbar from './Navbar';
+
+enum KudosMainRoutes {
+    Home = '/',
+    About = '/about',
+    Index = '/index',
+    Brand = '/brand',
+    Motion = '/motion',
+    Product = '/product',
+    Ai = '/ai',
+}
+
+enum KudosProjectRoutes {
+
+}
 
 const AppRouter = () => {
 
@@ -10,16 +23,16 @@ const AppRouter = () => {
         <BrowserRouter>
             <Navbar />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path='/index' />
-                <Route path='/brand' />
-                <Route path='/motion' />
-                <Route path='/product' />
-                <Route path='/ai' />
+                <Route path={KudosMainRoutes.Home} element={<Home />} />
+                <Route path={KudosMainRoutes.About} element={<About />} />
+                <Route path={KudosMainRoutes.Index} />
+                <Route path={KudosMainRoutes.Brand} />
+                <Route path={KudosMainRoutes.Motion} />
+                <Route path={KudosMainRoutes.Product} />
+                <Route path={KudosMainRoutes.Ai} />
             </Routes>
         </BrowserRouter>
     );
 }
 
-export default AppRouter;
+export { AppRouter, KudosMainRoutes };

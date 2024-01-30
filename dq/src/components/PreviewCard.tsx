@@ -1,30 +1,53 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { HomeFilterCategory } from './HomeFilter';
 import './PreviewCard.css';
+
+enum PreviewCardSize {
+    Small = 'small',
+    Medium = 'medium',
+    Large = 'large',
+}
+
+enum PreviewCardColor {
+    Red = 'red',
+    Green = 'green',
+    Blue = 'blue',
+}
 
 interface PreviewCardProps {
     link: string;
     callToAction: string;
     content: React.ReactNode;
-    color: string;
-    size: string;
+    currentCategory: HomeFilterCategory;
+    cardCategory: HomeFilterCategory;
+    color: PreviewCardColor;
+    size: PreviewCardSize;
 }
 
 const PreviewCard = (props: PreviewCardProps) => {
-    const { link, callToAction, content, color, size } = props;
+    const { link, callToAction, content, currentCategory, cardCategory, color, size } = props;
+    const showCard = currentCategory === cardCategory || currentCategory === HomeFilterCategory.Everything;
 
     return (
-        <Link to={link}>
-            <div className={"preview-card " + color + " " + size}>
-                <div className="preview-card-cta">
-                    {callToAction}
-                </div>
-                <div className="preview-card-content">
-                    {content}
-                </div>
-            </div>
-        </Link>
+        <div>
+            {
+                showCard ? (
+                    <Link to={link} >
+                        < div className={'preview-card ' + color + ' ' + size} >
+                            <div className='preview-card-cta'>
+                                {callToAction}
+                            </div>
+                            <div className='preview-card-content'>
+                                {content}
+                            </div>
+                        </div >
+                    </Link>) : (null)
+            }
+        </div>
     );
 }
 
-export default PreviewCard;
+export {
+    PreviewCard, PreviewCardColor, PreviewCardSize
+};
