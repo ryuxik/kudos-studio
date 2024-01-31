@@ -30,18 +30,16 @@ const PreviewCard = (props: PreviewCardProps) => {
     const showCard = currentCategory === cardCategory || currentCategory === HomeFilterCategory.Everything;
 
     return (
-        <div>
+        <div className={'preview-card ' + size + ' ' + color}>
             {
                 showCard ? (
-                    <Link to={link} >
-                        < div className={'preview-card ' + color + ' ' + size} >
-                            <div className='preview-card-cta'>
-                                {callToAction}
-                            </div>
-                            <div className='preview-card-content'>
-                                {content}
-                            </div>
-                        </div >
+                    <Link className='preview-card-inner' to={link} >
+                        <div className='preview-card-cta'>
+                            {callToAction}
+                        </div>
+                        <div className='preview-card-content'>
+                            {content}
+                        </div>
                     </Link>) : (null)
             }
         </div>

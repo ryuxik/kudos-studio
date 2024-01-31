@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    width: 100vw;
     height: 5vh;
     border: 1px solid var(--main-font-color);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 63.59%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(270deg, #A8D7FF -1.41%, #CBF155 20.9%, #FF9B45 42.48%, #EAE862 61.91%, #E8A4DD 73.91%, #FF5BE5 100%);

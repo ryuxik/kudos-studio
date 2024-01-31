@@ -1,35 +1,35 @@
 .preview-card {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-color: var(--blue-a);
     padding: 10px;
     border-radius: 4px;
     margin: 20px;
-    align-items: center;
 }
 
-.red{
+.preview-card-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.red {
     background-color: var(--red-a);
 }
 
-.green{
+.green {
     background-color: var(--green-a);
 }
 
-.blue{
+.blue {
     background-color: var(--blue-a);
 }
 
-.large{
+.large {
     flex-grow: 9;
 }
 
-.medium{
+.medium {
     flex-grow: 4;
 }
 
-.small{
+.small {
     flex-grow: 1;
 }
 
@@ -41,4 +41,9 @@
     color: var(--main-font-color);
     font-size: 1.2rem;
     font-weight: 400;
+}
+
+.preview-card-content {
+    font-size: calc(10px + 0.5vmin);
+    color: var(--main-font-color);
 }
