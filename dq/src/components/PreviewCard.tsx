@@ -25,22 +25,30 @@ interface PreviewCardProps {
     size: PreviewCardSize;
 }
 
+
+
 const PreviewCard = (props: PreviewCardProps) => {
     const { link, callToAction, content, currentCategory, cardCategory, color, size } = props;
     const showCard = currentCategory === cardCategory || currentCategory === HomeFilterCategory.Everything;
 
+    let getCardClasses = (showCard: Boolean) => {
+        let classes = size + ' preview-card ';
+        if (!showCard) return classes += color + ' rotator ';
+        return classes
+    }
+
     return (
-        <div className={'preview-card ' + size + ' ' + color}>
+        <div className={getCardClasses(showCard)}>
             {
                 showCard ? (
-                    <Link className='preview-card-inner' to={link} >
+                    <Link to={link} >
                         <div className='preview-card-cta'>
-                            {callToAction}
+                            {/* {callToAction} */}
                         </div>
                         <div className='preview-card-content'>
                             {content}
                         </div>
-                    </Link>) : (null)
+                    </Link>) : (<div className='preview-card-inner'></div>)
             }
         </div>
     );

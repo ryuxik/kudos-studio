@@ -1,11 +1,19 @@
 import { useState } from 'react';
+import baiduPreview from '../assets/baidu-preview.png';
+import coachPreview from '../assets/coach-preview.gif';
+import matchaPreview from '../assets/matcha-preview.jpg';
+import natePreview from '../assets/nate-preview.gif';
+import stevensonPreview from '../assets/stevenson-preview.png';
+import youtubePreview from '../assets/youtube-preview.png';
+import nyuPreview from '../assets/nyu-preview.png';
+import bakaPreview from '../assets/baka-preview.png';
+import commonPreview from '../assets/common-preview.jpg';
 import './Home.css';
 import { HomeFilter, HomeFilterCategory } from './HomeFilter';
 import { PreviewCard, PreviewCardColor, PreviewCardSize } from './PreviewCard';
 
-
 const Home = () => {
-    const [selectedCategory, setSelectedCategory] = useState(HomeFilterCategory.Everything)
+    const [selectedCategory, setSelectedCategory] = useState(HomeFilterCategory.Everything);
 
     return (
         <div className="home-container">
@@ -15,14 +23,14 @@ const Home = () => {
                 </h1>
             </div>
             <HomeFilter
-                    currentFilterCategory={selectedCategory}
-                    updateFilterCategory={setSelectedCategory}
-                />
+                currentFilterCategory={selectedCategory}
+                updateFilterCategory={setSelectedCategory}
+            />
             <div className='home-preview-card-container'>
                 <PreviewCard
                     link={"/coach"}
                     callToAction={'Coach'}
-                    content={<p>some preview of work for Coach</p>}
+                    content={<img src={coachPreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Motion}
                     color={PreviewCardColor.Red}
@@ -31,7 +39,7 @@ const Home = () => {
                 <PreviewCard
                     link={"/matcha"}
                     callToAction={'Matcha Finance'}
-                    content={<p>some preview of work for Matcha Finance</p>}
+                    content={<img src={matchaPreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Brand}
                     color={PreviewCardColor.Green}
@@ -40,7 +48,7 @@ const Home = () => {
                 <PreviewCard
                     link={"/common"}
                     callToAction={'Common'}
-                    content={<p>some preview of work for Common</p>}
+                    content={<img src={commonPreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Ai}
                     color={PreviewCardColor.Blue}
@@ -49,7 +57,7 @@ const Home = () => {
                 <PreviewCard
                     link={"/youtube"}
                     callToAction={'YouTube'}
-                    content={<p>some preview of work for YouTube</p>}
+                    content={<img src={youtubePreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Motion}
                     color={PreviewCardColor.Red}
@@ -58,7 +66,7 @@ const Home = () => {
                 <PreviewCard
                     link={"/baidu"}
                     callToAction={'Baidu'}
-                    content={<p>some preview of work for Baidu</p>}
+                    content={<img src={baiduPreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Motion}
                     color={PreviewCardColor.Green}
@@ -67,7 +75,7 @@ const Home = () => {
                 <PreviewCard
                     link={"/nyulangone"}
                     callToAction={'NYU Langone'}
-                    content={<p>some preview of work for NYU Langone</p>}
+                    content={<img src={nyuPreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Motion}
                     color={PreviewCardColor.Blue}
@@ -76,7 +84,7 @@ const Home = () => {
                 <PreviewCard
                     link={"/nate"}
                     callToAction={'Nate'}
-                    content={<p>some preview of work for Nate</p>}
+                    content={<img src={natePreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Motion}
                     color={PreviewCardColor.Red}
@@ -85,7 +93,7 @@ const Home = () => {
                 <PreviewCard
                     link={"/baka"}
                     callToAction={'Baka'}
-                    content={<p>some preview of work for Baka</p>}
+                    content={<img src={bakaPreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Ai}
                     color={PreviewCardColor.Green}
@@ -94,7 +102,7 @@ const Home = () => {
                 <PreviewCard
                     link={"/stevenson"}
                     callToAction={'Stevenson High'}
-                    content={<p>some preview of work for Stevenson High</p>}
+                    content={<img src={stevensonPreview} />}
                     currentCategory={selectedCategory}
                     cardCategory={HomeFilterCategory.Product}
                     color={PreviewCardColor.Blue}

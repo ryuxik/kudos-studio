@@ -24,7 +24,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-around;
-    align-items: stretch;
+    align-items: center;
     order: 2;
 }
 

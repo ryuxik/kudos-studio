@@ -1,12 +1,7 @@
 .preview-card {
-    padding: 10px;
+    
     border-radius: 4px;
     margin: 20px;
-}
-
-.preview-card-inner {
-    display: flex;
-    flex-direction: column;
 }
 
 .red {
@@ -23,14 +18,20 @@
 
 .large {
     flex-grow: 9;
+    max-height: calc(400px + 10vmin);
+    max-width: calc(400px + 10vmin);
 }
 
 .medium {
     flex-grow: 4;
+    max-height: calc(200px + 10vmin);
+    max-width: calc(200px + 10vmin);
 }
 
 .small {
     flex-grow: 1;
+    max-height: calc(100px + 10vmin);
+    max-width: calc(100px + 10vmin);
 }
 
 .preview-card:hover {
@@ -46,4 +47,15 @@
 .preview-card-content {
     font-size: calc(10px + 0.5vmin);
     color: var(--main-font-color);
+    /* min-width: calc(50px + 10vmin);
+    min-height: calc(50px + 10vmin); */
+}
+
+.preview-card-inner {
+    padding: 10px;
+}
+
+.preview-card-content img {
+    max-height: 100%;
+    max-width: 100%;
 }

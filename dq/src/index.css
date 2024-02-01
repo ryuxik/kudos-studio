@@ -12,6 +12,7 @@
   --pink-b: #F3A19A;
   --red-a: #EE1414;
   --red-b: #FE11CE;
+  --rotation-deg: 0deg;
 }
 
 
@@ -26,4 +27,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.rotator {
+  filter: hue-rotate(var(--rotation-deg));
 }

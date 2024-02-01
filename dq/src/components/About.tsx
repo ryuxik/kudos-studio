@@ -1,5 +1,5 @@
 import './About.css';
-import profile from './assets/danqi.jpg';
+import profile from '../assets/danqi.jpg';
 
 const About = () => {
 
